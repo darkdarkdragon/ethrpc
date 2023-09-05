@@ -259,10 +259,10 @@ func (rpc *EthRPC) EthGetBalance(address, block string) (big.Int, error) {
 }
 
 // EthGetStorageAt returns the value from a storage position at a given address.
-func (rpc *EthRPC) EthGetStorageAt(data string, position int, tag string) (string, error) {
+func (rpc *EthRPC) EthGetStorageAt(data, position, tag string) (string, error) {
 	var result string
 
-	err := rpc.call("eth_getStorageAt", &result, data, IntToHex(position), tag)
+	err := rpc.call("eth_getStorageAt", &result, data, position, tag)
 	return result, err
 }
 

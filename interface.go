@@ -19,7 +19,7 @@ type EthereumAPI interface {
 	EthAccounts() ([]string, error)
 	EthBlockNumber() (int, error)
 	EthGetBalance(address, block string) (big.Int, error)
-	EthGetStorageAt(data string, position int, tag string) (string, error)
+	EthGetStorageAt(data, position, tag string) (string, error)
 	EthGetTransactionCount(address, block string) (int, error)
 	EthGetBlockTransactionCountByHash(hash string) (int, error)
 	EthGetBlockTransactionCountByNumber(number int) (int, error)

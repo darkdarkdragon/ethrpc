@@ -384,7 +384,7 @@ func (s *EthRPCTestSuite) TestEthGetBalance() {
 
 func (s *EthRPCTestSuite) TestEthGetStorageAt() {
 	data := "0x295a70b2de5e3953354a6a8344e616ed314d7251"
-	position := 33
+	position := "0x21"
 	tag := "pending"
 
 	s.registerResponse(`"0x00000000000000000000000000000000000000000000000000000000000004d2"`, func(body []byte) {
